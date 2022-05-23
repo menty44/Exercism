@@ -7,14 +7,36 @@ defmodule Rules do
   end
 
   def score?(touching_power_pellet, touching_dot) do
-    # Please implement the score?/2 function
+    if touching_power_pellet === true or touching_dot === true do
+      true
+    else
+      false
+    end
   end
 
   def lose?(power_pellet_active, touching_ghost) do
-    # Please implement the lose?/2 function
+
+    if  power_pellet_active === touching_ghost do
+      false
+    else
+      true
+    end
+
+    if  power_pellet_active === true and touching_ghost === false do
+      false
+    end
+
+    if  power_pellet_active === false and touching_ghost === true do
+      true
+    end
   end
 
   def win?(has_eaten_all_dots, power_pellet_active, touching_ghost) do
-    # Please implement the win?/3 function
+    if has_eaten_all_dots === lose?(power_pellet_active, touching_ghost) do
+      false
+    else
+      true
+    end
   end
+
 end
