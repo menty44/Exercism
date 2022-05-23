@@ -1,14 +1,17 @@
 defmodule LanguageList do
   def new() do
-    # Please implement the new/0 function
+    []
   end
 
   def add(list, language) do
     # Please implement the add/2 function
+    Enum.sort(list ++ [language])
   end
 
   def remove(list) do
-    # Please implement the remove/1 function
+    index = Enum.count(list) - 1
+    string_to_be_deleted = Enum.at(list, index)
+    List.delete(list, string_to_be_deleted)
   end
 
   def first(list) do
@@ -16,7 +19,7 @@ defmodule LanguageList do
   end
 
   def count(list) do
-    # Please implement the count/1 function
+    Enum.count(list)
   end
 
   def functional_list?(list) do
