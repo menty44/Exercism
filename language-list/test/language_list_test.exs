@@ -54,24 +54,24 @@ defmodule LanguageListTest do
 #    end
 #  end
 #
-#  describe "first/1" do
-#    @tag task_id: 4
-#    test "add one language, then get the first" do
-#      assert LanguageList.new() |> LanguageList.add("Elixir") |> LanguageList.first() == "Elixir"
-#    end
-#
-#    @tag task_id: 4
-#    test "add a few languages, then get the first" do
-#      first =
-#        LanguageList.new()
-#        |> LanguageList.add("Elixir")
-#        |> LanguageList.add("Prolog")
-#        |> LanguageList.add("F#")
-#        |> LanguageList.first()
-#
-#      assert first == "F#"
-#    end
-#  end
+  describe "first/1" do
+    @tag task_id: 4
+    test "add one language, then get the first" do
+      assert LanguageList.new() |> LanguageList.add("Elixir") |> LanguageList.first() == "Elixir"
+    end
+
+    @tag task_id: 4
+    test "add a few languages, then get the first" do
+      first =
+        LanguageList.new()
+        |> LanguageList.add("Elixir")
+        |> LanguageList.add("Prolog")
+        |> LanguageList.add("F#")
+        |> LanguageList.first()
+
+      assert first == "F#"
+    end
+  end
 #
   describe "count/1" do
     @tag task_id: 5

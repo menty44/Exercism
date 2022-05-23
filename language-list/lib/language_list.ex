@@ -4,7 +4,6 @@ defmodule LanguageList do
   end
 
   def add(list, language) do
-    # Please implement the add/2 function
     Enum.sort(list ++ [language])
   end
 
@@ -15,7 +14,10 @@ defmodule LanguageList do
   end
 
   def first(list) do
-    # Please implement the first/1 function
+    cond do
+      Enum.count(list) === 1 -> Enum.at(list, 0)
+      Enum.count(list) > 1 -> Enum.at(list, 1)
+    end
   end
 
   def count(list) do
