@@ -4,23 +4,15 @@ defmodule LanguageList do
   end
 
   def add(list, language) do
-    cond do
-      Enum.count(list) === 0 -> list ++ [language]
-      Enum.count(list) > 0 -> Enum.sort(list ++ [language], :desc)
-    end
+    [language | list]
   end
 
-  def remove(list) do
-    index = Enum.count(list) - 1
-    string_to_be_deleted = Enum.at(list, index)
-    List.delete(list, string_to_be_deleted)
+  def remove([_ | tail]) do
+    tail
   end
 
-  def first(list) do
-    cond do
-      Enum.count(list) === 1 -> Enum.at(list, 0)
-      Enum.count(list) > 1 -> Enum.at(list, 1)
-    end
+  def first([head | _]) do
+    head
   end
 
   def count(list) do

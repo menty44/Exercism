@@ -27,7 +27,7 @@ defmodule LanguageListTest do
         |> LanguageList.add("F#")
         |> LanguageList.add("Elixir")
 
-      assert list == ["Haskell", "F#", "Erlang", "Elixir", "Clojure"]
+      assert list == ["Elixir", "F#", "Erlang", "Haskell", "Clojure"]
     end
   end
 
