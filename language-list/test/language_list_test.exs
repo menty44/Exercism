@@ -101,16 +101,16 @@ defmodule LanguageListTest do
       assert count == 3
     end
   end
-#
-#  describe "functional_list?/1" do
-#    @tag task_id: 6
-#    test "a functional language list" do
-#      assert LanguageList.functional_list?(["Clojure", "Haskell", "Erlang", "F#", "Elixir"])
-#    end
-#
-#    @tag task_id: 6
-#    test "not a functional language list" do
-#      refute LanguageList.functional_list?(["Java", "C", "JavaScript"])
-#    end
-#  end
+
+  describe "functional_list?/1" do
+    @tag task_id: 6
+    test "a functional language list" do
+      assert LanguageList.functional_list?(["Clojure", "Haskell", "Erlang", "F#", "Elixir"])
+    end
+
+    @tag task_id: 6
+    test "not a functional language list" do
+      refute LanguageList.functional_list?(["Java", "C", "JavaScript"])
+    end
+  end
 end

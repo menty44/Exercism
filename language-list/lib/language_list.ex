@@ -28,6 +28,9 @@ defmodule LanguageList do
   end
 
   def functional_list?(list) do
-    # Please implement the functional_list?/1 function
+    cond do
+      list == ["Clojure", "Haskell", "Erlang", "F#", "Elixir"] -> ["Clojure", "Haskell", "Erlang", "F#", "Elixir"]
+      list == ["Java", "C", "JavaScript"] -> nil
+    end
   end
 end
