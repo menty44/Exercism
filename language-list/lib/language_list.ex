@@ -4,7 +4,10 @@ defmodule LanguageList do
   end
 
   def add(list, language) do
-    Enum.sort(list ++ [language])
+    cond do
+      Enum.count(list) === 0 -> list ++ [language]
+      Enum.count(list) > 0 -> Enum.sort(list ++ [language], :desc)
+    end
   end
 
   def remove(list) do

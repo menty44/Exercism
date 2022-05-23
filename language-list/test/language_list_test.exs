@@ -42,18 +42,18 @@ defmodule LanguageListTest do
       assert list == []
     end
 
-#    @tag task_id: 3
-#    test "adding two languages, when removed, removes first item" do
-#      list =
-#        LanguageList.new()
-#        |> LanguageList.add("F#")
-#        |> LanguageList.add("Elixir")
-#        |> LanguageList.remove()
-#
-#      assert list == ["F#"]
-#    end
+    @tag task_id: 3
+    test "adding two languages, when removed, removes first item" do
+      list =
+        LanguageList.new()
+        |> LanguageList.add("F#")
+        |> LanguageList.add("Elixir")
+        |> LanguageList.remove()
+
+      assert list == ["F#"]
+    end
 #  end
-#
+
   describe "first/1" do
     @tag task_id: 4
     test "add one language, then get the first" do
