@@ -35,6 +35,6 @@ defmodule FreelancerRates do
 
     ds = apply_discount(dr, discount)
     fin = fin.(budget, ds)
-    Float.floor fin, 1 |> IO.inspect label: " wewe"
+    Float.floor fin, 1
   end
 end
